@@ -56,21 +56,21 @@ int main()
 	***************
 	*/
 	//14x14
-	int w = 14;
-	for (int i = 1; i <= w; i++) cout << "*"; //1 wiersz
-	cout << endl;
-	for (int i = 1; i <= w-2; i++) {//wiersze
-		for (int j = 1; j < w-i; j++) {
-			cout << " ";
-		}
-		cout << "*";
-		for (int j = w-1; j <w-i ; j--) {
-			cout << " ";
-		}
-		cout << endl;
-	}
-	for (int i = 1; i <= w; i++) cout << "*";//ostatni wiersz
-	cout << endl;
+	//int w = 14;
+	//for (int i = 1; i <= w; i++) cout << "*"; //1 wiersz
+	//cout << endl;
+	//for (int i = 1; i <= w-2; i++) {//wiersze
+	//	for (int j = 1; j < w-i; j++) {
+	//		cout << " ";
+	//	}
+	//	cout << "*";
+	//	for (int j = w-1; j <w-i ; j--) {
+	//		cout << " ";
+	//	}
+	//	cout << endl;
+	//}
+	//for (int i = 1; i <= w; i++) cout << "*";//ostatni wiersz
+	//cout << endl;
 
 	//zad dom.
 	/*15x15
@@ -90,5 +90,22 @@ int main()
 	 *           *
 	***************
 	*/
+	int w = 15;
+	int z = 2;
+	int k = 14;
+	for (int i = 1; i <= w; i++) cout << "*"; //1 wiersz
+	cout << endl;
+	for (int i = 1; i <= w - 2; i++) {//wiersze
+		for (int j = 1; j <= w; j++) {
+			if (j == z) cout << "*";
+			else if (j == k) cout << "*";
+			else cout << " ";
+		}
+		z++;
+		k--;
+		cout << endl;
+	}
+	for (int i = 1; i <= w; i++) cout << "*";//ostatni wiersz
+	cout << endl;
 }
 
